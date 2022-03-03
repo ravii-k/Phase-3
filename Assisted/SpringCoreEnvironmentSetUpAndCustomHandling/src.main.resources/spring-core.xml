@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd ">
+	<bean id="a1"
+		class="com.mphasis.spring.SpringCoreDemo.model.Author">
+		<constructor-arg name="aid" value="101"></constructor-arg>
+		<constructor-arg name="aname" value="Ravi"></constructor-arg>
+		<constructor-arg name="email" value="kasyap@gmail.com"></constructor-arg>
+		<constructor-arg name="genre" value="CS"></constructor-arg>
+	</bean>
+	<bean class="com.mphasis.spring.SpringCoreDemo.model.Book">
+	<!--  setter injection -->
+	<property name="bid" value="201"></property>
+	<property name="title" value="Core Java"></property>
+	<property name="price" value="230.45"></property>
+	<property name="author" ref="a1"></property>
+	</bean>
+	
+</beans>
